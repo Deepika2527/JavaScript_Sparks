@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+   var a = 80000;
+
+
+   {
+                var a = 10000;
+                let b = 20000;
+                const c = 30000;
+
+                console.log(a);
+                console.log(b);
+                console.log(c);
+            }
+
+            console.log(a);
+                // console.log(b);
+                // console.log(c);
+
+        function outer() {
+
+            {
+                var a = 10;
+                let b = 20;
+                const c = 30;
+
+                console.log(a);
+                console.log(b);
+                console.log(c);
+            }
+            console.log('Im outside of the block but insid og the function');
+
+            var a = 100;
+            let b= 200;
+            const c = 300;
+
+               console.log(a);
+                console.log(b);
+                console.log(c);
+            
+        }
+        outer();
+         console.log(a);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

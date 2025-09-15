@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type casting</title>
+</head>
+<body>
+
+
+    <!--
+     Type casting- Comverting on data type to another data type is calles as type casting
+     2 types of casting
+       1. implct type casting-(Type Coercion)
+       2. explicit type casting- we need to use some built in functions
+           Number()
+           String()
+           Boolean()
+           parseInt()- Convert a str to integer
+
+           ,parseFloat()
+
+        -->
+
+    <script>
+        console.log( 'Hello ' + 'all');
+        console.log( typeof( 5+ 5));
+         console.log( 5 + "5");
+         let a = 20;
+         let b= "10";
+         let c = a%b;
+         console.log(c);
+         console.log(typeof(c));
+         //using explict converstion-Number()
+         let v = '123';
+         console.log(v);
+         console.log(typeof(v));
+         console.log(typeof (Number(v)));
+         console.log(Number("12.34"));
+         console.log('12.34');
+         console.log(Number(""));  //0
+         console.log(Number(" "));  //0
+         console.log(Number(true)); //1
+         console.log(Number(false)); //0
+         console.log(Number(null)); //0
+         console.log(Number(undefined)); //NaN
+         console.log(Number("123abc")); //
+
+         //Using explict converstion -String()
+         let x ;
+         console.log(123);
+         console.log(String(123));
+         console.log(typeof( String(123)));
+         console.log(String(12.34));
+         console.log(String(true));
+         console.log('Normal string' + 'true');
+         
+         console.log(String(false));
+         console.log(String(null));
+         console.log(String(undefined));
+         console.log('undefined');
+         
+         console.log(x);
+         console.log(String([1,2,3]));
+         console.log(String({a:1}));
+
+          //Using explict converstion -Boolean()-Converts the data into t or f
+          console.log(Boolean('Hello'));
+          console.log(Boolean('')); //f
+          console.log(Boolean(' ')); //t
+          console.log(Boolean([])); //t
+          console.log(Boolean({})); //t
+          console.log(Boolean(null)); //f
+          console.log(Boolean(undefined)); //f
+
+          //parseInt()
+          console.log('using parseint');
+          
+          console.log(parseInt('123'));
+          console.log(parseInt('123abc'));
+          console.log(Number('123abc'));
+          console.log(parseInt('abc123')); //NaN
+
+          console.log(parseInt("   456   "));
+          console.log(Number ("   456  "));
+
+
+          //parseFloat
+          console.log(parseFloat('123.5y'));
+          
+
+
+          
+          
+          
+          
+          
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+        
+    </script>
+    
+</body>
+</html>

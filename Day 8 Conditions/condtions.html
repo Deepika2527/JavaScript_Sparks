@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condtions</title>
+</head>
+<body>
+
+    <script>
+
+        let age = 15;
+        if(age >=18){
+            console.log('Eligible for vote');
+            document.write('Im above 18')
+            
+        }
+
+        if(true){
+            console.log("Im logged in");
+            
+        }
+
+        if(1){
+            console.log('Im happy');
+            
+        }
+
+        if(0){
+            console.log('im unhappy');
+            
+        }
+
+        //if -else
+
+        //eg 1
+        let ag =  30;
+
+        if(ag <=16){
+            console.log('Minor');
+            
+        }
+        else{
+            console.log('Major');
+            
+
+        }
+
+
+        //ex 2
+
+        let num  = -5;
+        if(num >5){
+            console.log('The Number is greater than 5');
+            
+        }
+        else{
+            console.log('the number is lesser then 5');
+            
+        }
+
+        let isRaining =  false;
+        if(isRaining){
+            // console.log("Take an umbrella");
+            document.write('<h1 style ="color:Yellow">Take an Umbrella and a Raincoat</h1>')
+            
+        }
+        else{
+            // console.log('Take sunglasses');
+             document.write('<h1 style = "color:Green">Take sunglasses</h1>');
+            
+        }
+
+
+      let number = -3;
+        if(number>0){
+            document.write('Postive No')
+        }
+
+        else{
+            document.write('Negative no')
+        }
+   // if else-if
+
+
+       let marks = 95;
+        if(marks>=90){
+            document.write("<h1 style ='color:Yellow'> Grade A </h1>");
+            
+        }
+        else if(marks>=80){
+            document.write('<h1 style ="color:Orange"> Grade B </h1>');
+            
+        }
+        else if(marks>=65){
+            document.write('<h1 style ="color:Blue"> Grade C </h1>');
+            
+        }
+        else{
+          document.write('<h1 style ="color:Red"> Notup to the mark </h1>');
+            
+        }
+
+        let  n =-2;
+        if(n >0){
+            console.log('Postive no');
+            
+        }
+        else if(n <0){
+            console.log('Negative NO');
+            
+        }
+        else{
+            console.log('Its just 0');
+            
+        }
+
+
+        //switch
+        let color = 'Red';
+        switch (color) {
+            case 'Red':
+                document.write('.....  STOP  .......');
+                
+                break;
+            case 'Yellow':
+                document.write('****   Get Readyy *****');
+                break;
+            case 'Green':
+                document.write('@@@@ Goo @@');
+                break;
+        
+            default:
+               document.write('Traffic')
+        }
+
+
+        let day = 6;
+        switch(day)
+        
+        {
+
+            case 1 :  document.write("Monday");
+                    break;
+            case 2 :  document.write("Tueday");
+                    break;
+            case 3 :  document.write("Wednesday");
+                    break;
+            case 4 :  document.write("Thrusday");
+                    break;
+            case 5 :  document.write("Friday");
+                    break;
+            case 6 :  document.write("Saturday");
+                    break;
+            default: document.write('Sunday..Holiday')
+
+            
+
+
+        }
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>
