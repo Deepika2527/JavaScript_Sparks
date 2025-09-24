@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+
+let name = "AIT";
+
+
+
+
+       (function(){
+        let name ='AIT';
+            console.log('Hello');
+            console.log(name);
+            
+            
+        })
+        ();
+
+
+        let message = 'Good Morning';
+
+            function greet(){
+                console.log(`${message}`);
+                
+            }
+            greet();
+
+
+        console.log('Im trying to invoke again');
+
+
+
+        function fact(n){
+            if(n===0){
+                return 1
+            }
+            else{
+                return n* fact(n-1)
+            }
+        }
+
+        console.log(fact(5));
+
+
+
+
+        function add(a,b){
+            console.log(a+b);
+            
+        }
+
+        add(1,2)
+
+
+       //arrow function
+        let disp = ()=> {console.log("Hi from arrow")}
+        disp();
+
+
+       //arrow function withParameters
+        let sum = (x,y)=> {console.log(x+y)}
+      sum(2,10)
+
+
+      //arrow function with parameters without Paranthesis
+      let dispN = name =>
+      console.log(`Hi ${name}`);
+      dispN('Ramya')
+
+
+      //arrow function with return
+
+
+      let grt = n1 => {c return n1};
+      console.log(grt("Good Evening...."));
+
+      //arrow function with implict return
+
+       let grt1 = n1 => {  n1};
+      console.log(grt("Good Evening....Allll...."));
+
+
+
+      //
+       let grt2 = _ =>console.log(grt("Good Evening.... my frnds"));
+
+       grt2();
+   //impure Function-Which chnages the values
+       let mul = (no) => console.log(no*Math.random());
+       mul(3)
+       
+      
+      
+        
+        
+        
+
+
+       
+
+
+        
+    </script>
+
+    <script src="./external.js"></script>
+    
+</body>
+</html>

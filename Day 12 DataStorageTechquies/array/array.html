@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let array = [1,2,3,4,5];
+        console.log(array);
+
+
+        let arr = new Array('Deepika','Nikatha','Tarunnam');
+        console.log(arr); 
+
+        //
+        //accessing
+        console.log(array[1]);
+
+        
+        // const randomNo = ['hello',9199199020,true,null,undefined,{name:'JS', loc:'hyd'},[1,2,3]]
+        // console.log(randomNo);
+        // console.log(randomNo[5]);
+        // console.log(randomNo[5].name);
+        // console.log(randomNo[6]);
+        // console.log(randomNo[6][2]);
+
+    //length
+    // console.log(randomNo.length);
+    // randomNo.length = 0;
+    // console.log(randomNo);
+
+    //w-2
+    let randomNo1 = ['hello',9199199020,true,null,undefined,{name:'JS', loc:'hyd'},[1,2,3]]
+    console.log(randomNo1); 
+    randomNo1 = [];
+    console.log(randomNo1);
+
+
+    //methods- 
+    const productsCategories = ["Electronics","Clothing","Kitchen","Home","Books"];
+    console.log(productsCategories);productsCategories
+    
+    //push()
+    productsCategories.push("Toys","Groceries");
+    console.log(productsCategories);
+    console.log(productsCategories);
+
+
+    //pop-removes the last elemnet from an arrayand returns that element
+    // console.log(productsCategories.pop());
+    
+
+
+    //shift and unshift
+
+   
+    //unshift- add one or more elemnts at the beginning of the array and returns the new length of the array.
+    // cart.unshift('Juicer','Notebook');
+    // console.log(cart);
+
+    //shift -Removes the first elemnt of the array and returns tthat elemnt.
+    // console.log(cart.shift());
+
+
+    //slice() and splice()
+    //slice- slice helps u to extract a portion of an arrayinto a newarry without modying the orinal array.
+    // console.log(cart);
+    // let selectedCat = cart.slice(0,2);
+    // console.log(selectedCat);
+    // console.log(cart);
+    //splice - add/removes items to/from the array, and returns the removeditsms
+
+
+    // let removedItem = cart.splice(1,1);
+    // console.log(removedItem);
+  
+    
+    
+    let cart = ['Mobiles','Clothes','Makeup'];
+    console.log(cart);
+    console.log(cart.splice(1,1));
+    let data = cart.splice(2,0,'Fashion','Headset');
+    console.log(data);
+
+
+    //join- converts and array to the sring
+
+    console.log(cart);
+    console.log(cart.join('   '));
+
+    //fill- helps us to fill all the elemnet of an array from a start index to an endindex witha static value.
+    const numList =[10,20,31,40,50];
+    console.log(numList);
+    const filledArray = numList.fill(0,1,4)
+    console.log(filledArray);
+    //sort -
+    const numList1 =[10,20,31,40,50];
+    console.log(numList1);
+    const sotNumber = numList1.sort()
+    console.log(sotNumber);
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>

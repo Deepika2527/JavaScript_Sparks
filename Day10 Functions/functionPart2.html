@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function part2</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let a = function greet() {
+            console.log('hi');
+
+
+        }
+        // console.log(greet());
+
+        a();
+
+
+        let disp = function () {
+            console.log('Hello all');
+
+        }
+        //  let ans =disp()
+        //  console.log(ans);
+        disp();
+
+
+        //nested
+        function outer() {
+            console.log("Im from outer");
+
+            function inner() {
+                console.log("Im from inner");
+
+            }
+            inner();
+
+        }
+        outer();
+
+
+        //
+        // function Outer(){
+        //     let name= 'AIT';
+        //     console.log(`${name} -Outer`);
+
+        //     function Inner(){
+        //         console.log(`${name} -Inner`);
+                
+        //     }
+        //     Inner();
+            
+        // }
+        // Outer();
+
+        //   console.log(name);
+
+
+          //anonmoyus function
+             
+    //    setTimeout(function(){
+    //     console.log(`Hello all my dear students`);
+        
+    //    },10000)
+
+
+    //    setTimeout(function(a,b){
+    //     console.log(`Hello all my dear students`);
+    //     console.log(a+b);
+        
+        
+    //    },1000,3,0)
+
+
+
+       //callback
+
+       function disp1(p1){
+        console.log('This is a callback function disp1 ');
+        p1();
+        
+       }
+
+       function disp2(){
+        console.log("Im from funtion2 - dips2");
+        
+       }
+
+       disp1(disp2)
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

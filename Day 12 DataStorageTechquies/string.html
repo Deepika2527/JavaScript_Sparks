@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+        // strings- Collection of characters which are enclosed in a '' or ""
+
+        let name = ' Deepika ';
+        console.log(name);
+
+        //    //constructor-Way- special function or  a method that is used in oops,that is automaticlyy called when an object i created
+        //    Purose-Iitialise the objetc's propertoes 
+
+
+
+        //string literal
+
+        // let name1 = new String("Tarunam");
+
+
+        // console.log(name1);
+        // console.log(typeof (name1));
+
+
+
+        //methods- Take the data inside the paranthesis and propeties
+        //in string he original data will not be modified
+
+
+        // let n = "JAvascript language";
+        // console.log(n.length);
+
+        //indexOf()- returns the first Occurance of the charcter that we passed.
+        // it returns -1 if the string charcater is not found
+        // console.log(n.indexOf('a'));
+        // console.log(n.indexOf('n'));
+        // console.log(n.indexOf('x'));
+        // console.log(n.indexOf(' '));
+
+        // console.log(n.indexOf(''));
+        // console.log(n.indexOf(0));
+
+        // console.log(n.indexOf(-4));
+
+        //subString- It will return the substring of the mentioned values .
+        //no -ve indexing
+
+        // let n1 = "Deepika Vemuri";
+        // console.log(n1);
+        // console.log(n1.substring(0));
+        // console.log(n1.substring(2));
+        // console.log(n1.substring(5));
+        // console.log(n1.substring(0,4));
+        // console.log(n1.substring(0,5));
+        // console.log(n1.substring(15)); //empty
+        // console.log((n1.substring()));
+        // console.log(n1.substring(-1));  //deepika vemuri  -1=>0
+        // console.log(n1.substring(-2));
+
+        // //touperCase()
+        // let s ="helloALL";
+        // console.log(s.toUpperCase());
+        // console.log(s.toLowerCase());
+
+        // //replace()- Replace the firstOccurances of the string
+
+        // let str = "Good mng all..How was your mng?";
+        // console.log(str);
+
+        // console.log(str.replace('mng','Morning'));
+        // console.log(str.replaceAll('mng','Morning'));
+
+        // //
+
+        // let nm1= "good";
+        // let nm2 ="evening";
+        // console.log(nm1+nm2);
+
+        // console.log(nm1.concat(nm2));
+
+
+        //length -
+        let str1 = 'Hello, world!';
+        let str2 = "Hello, world!";
+        let str3 = `Hello, world`;
+        console.log(str1,str2,str3);
+
+        console.log(str1[1]);
+        //toUpperCase(),toLowerCase()
+        //indexOf() and lastIndexOf();
+
+        let samplestring ="JavaScript is awesome..!!";
+        console.log(samplestring);
+        console.log(samplestring.indexOf('a'));
+        console.log(samplestring.lastIndexOf('a'));
+
+        ////replace(), replaceAll()
+
+        //slice(),substring()
+
+        console.log(samplestring.slice(0,10));
+        console.log(samplestring.slice(-1));
+        console.log(samplestring.substring(-1));
+
+        console.log(samplestring.slice(12,9)); //empty
+        console.log(samplestring.substring(12,9)); //9,12
+
+        console.log(samplestring.substr(0,10)); //task
+
+        //trim
+    //     let stringWithSpaces = "   hello   world    ";
+    //     console.log(stringWithSpaces);
+    //     console.log(stringWithSpaces.trim());
+    //     console.log(stringWithSpaces.trimStart());
+    //    console.log(stringWithSpaces.trimEnd());
+       
+       //charAt
+    //    console.log(samplestring.charAt(0));
+    //     console.log(samplestring.charAt(90));
+
+    //     //includes
+    //     console.log(samplestring.includes("is"));
+    //       console.log(samplestring.includes("are"));
+
+
+    //       //repeat()
+    //       console.log("Ha".repeat(9));
+
+          //split()
+          var n = "Deepika Vemuri";
+          console.log(n);
+          console.log(n.split(''));
+          console.log(n.split('m'));
+          
+          console.log(n.split('e',4));
+          
+          
+          
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+
+
+
+
+    </script>
+
+</body>
+
+</html>
