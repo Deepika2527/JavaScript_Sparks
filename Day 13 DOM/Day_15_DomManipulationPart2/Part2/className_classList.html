@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClasName and classList</title>
+</head>
+<body>
+    <p id="para" class="text big">Hello</p>
+
+
+    <!-- 
+    classname - property gets or sets the enitre class attribute as a string;
+                if we assign a ew values it will override the existing values
+    
+    and
+     classlist - works like an array
+            - it allows you to add, remove,toggle classes individually
+            safer than the className because it wotnt accidentally remove other clases
+    
+    -->
+
+
+
+    <script>
+
+        let p = document.getElementById("para");
+        console.log(p);
+        // console.log(p.className);
+
+        //
+        // p.className = "highlight new";
+        //  console.log(p.className);
+
+
+        //using classList
+
+        console.log(p.classList);
+        p.classList.add("Highlight")
+        p.classList.add('one','two');
+        p.classList.remove('one');
+        p.classList.toggle('hidden')
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>

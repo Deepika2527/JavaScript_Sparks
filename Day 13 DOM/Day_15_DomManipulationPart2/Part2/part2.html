@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul id="mobiles">
+        <li id="li1">list 1</li>
+        <li id="li2">list 2</li>
+        <li id="li3">list 3</li>
+        <li id="li4">list 4</li>
+        <li id="li5">list 5</li>
+        <!-- <li> kist 6</li> -->
+    </ul>
+
+
+    <figure>
+        <img src="https://images.pexels.com/photos/4738081/pexels-photo-4738081.jpeg" alt="img" height="200px" width="200px">
+        <figcaption>My Natureimage</figcaption>
+    </figure>
+
+    <!-- <img src="https://images.pexels.com/photos/4738081/pexels-photo-4738081.jpeg" alt="imgtag" height="100px" width="100px">
+    <p>My img</p> -->
+
+
+
+    <script>
+
+
+
+
+        //retrieving the mobiles using id
+        let ul = document.getElementById("mobiles");
+        console.log(ul);
+
+        //retreiving the list using d
+        let li1 = document.getElementById('li1');
+        let li2 = document.getElementById('li2');
+        let li3 = document.getElementById('li3');
+        let li4 = document.getElementById('li4');
+        let li5 = document.getElementById('li5');
+
+
+        //creating list6
+        let li6 = document.createElement("li");
+        console.log(li6);
+
+        //setAttributes for li6
+
+        li6.setAttribute('id','li6')
+
+        //getAttribute
+        console.log(li6.getAttribute('id'));
+
+        //hasAttribute 
+         console.log(li6.hasAttribute('class'));
+         //Adding text to the li6
+
+         li6.innerHTML = 'list 6'
+
+
+         let li7 =  document.createElement('li');
+         li7.innerHTML = 'list 7';
+         let li8 =  document.createElement('li');
+         li8.innerHTML ='list 8';
+         console.log(li7);
+         console.log(li8);
+         
+         //append elemnts
+        //  apendChild
+         ul.appendChild(li6);
+         ul.append(li7,li8)
+
+        //  ul.prepend(li6)
+
+
+
+        //replacing li6 with li8
+        ul.replaceChild(li8,li5)
+
+        //removeChild
+        //   ul.removeChild(li2)
+
+        //insert li3 before li2
+        ul.insertBefore(li3,li2)
+
+
+
+         
+
+        
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

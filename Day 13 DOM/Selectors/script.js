@@ -1,6 +1,13 @@
 //getElementByid
 
 //access the id using document
+//id
+  let para = document.getElementById('para');
+  console.log(para);
+  para.style.fontSize = '40px';
+  para.classList.add('box')
+
+
 let idSelector = document.getElementById('class1');
 console.log(idSelector);
 
@@ -50,4 +57,5 @@ for(let i=0; i<classSelector.length;i++){
 
   let querySelctall = document.querySelectorAll('li,p');
   console.log(querySelctall);
+  // querySelectorAll.classList.add('box')
   
