@@ -51,10 +51,18 @@
    
 
 
-btn.addEventListener('mouse',()=>{
-    alert('mouse is In');
+//rightclick
+btn.addEventListener('click',(e)=>{
+    alert("Im clicked using right")
+    console.log(e);
+    console.log(e.type);
+    console.log(e.offsetY);
+    
+    
     
 })
+
+
 
 </script>
     

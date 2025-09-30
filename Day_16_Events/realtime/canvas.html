@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canavs</title>
+    <style>
+        canvas{
+            border: 5px solid black;
+            cursor: crosshair;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Drawing canvas</h1>
+    <canvas id="canvas" height="300px" width="300px"></canvas>
+
+
+
+    <script>
+       let canvas = document.getElementById('canvas');
+       console.log(canvas);
+       let ctx = canvas.getContext('2d');
+       console.log(ctx);
+
+       let isDrawing = false;
+
+       //start drwaing
+
+       canvas.addEventListener("mousedown",(e)=>{
+           isDrawing = true;
+           ctx.beginPath();
+           ctx.moveTo(e.offsetX,e.offsetY)
+
+
+       })
+
+       //drawlines
+       canvas.addEventListener("mousemove",(e)=>{
+        if(isDrawing){
+            ctx.lineTo(e.offsetX,e.offsetY);
+            ctx.stroke();
+        }
+
+       })
+
+       //stopdrawing
+
+       canvas.addEventListener("mouseup",()=>{
+        isDrawing = false;
+
+       })
+       canvas.addEventListener("mouseout",()=>{
+        isDrawing = false;
+
+       })
+
+
+
+
+
+
+
+
+
+       
+       
+
+    </script>
+    
+</body>
+</html>
