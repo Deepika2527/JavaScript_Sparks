@@ -1,103 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-D-M</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container{
-            background-color: #fff;
-            padding: 20px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        h2{
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        select{
-            padding:8px 12px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            outline: none;
-            font-size: 14px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Style DOB</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background:#f0f2f5;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        flex-direction: column;
+    }
+    .container {
+        background:#fff;
+        padding:25px 40px;
+        border-radius:8px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        text-align:center;
+        width:300px;
+    }
+    h3 {
+        color:#1877f2;
+        margin-bottom:20px;
+        font-weight:bold;
+        font-size: 50px;
+    }
+    select {
+        padding:8px 10px;
+        margin:5px 2px;
+        border-radius:6px;
+        border:1px solid #ccd0d5;
+        width:80px;
+        text-align:center;
+    }
+    .dob-label {
+        font-size:14px;
+        color:#606770;
+        margin-bottom:10px;
+        display:block;
+    }
+</style>
 </head>
 <body>
-     <div class="container">
-        <h2>Select The Date</h2>
-        <select name="" id="year">
-         
-        </select>
-        <select name="" id="Day">
-          
-        </select>
-          <select name="" id="Month">
-            <!-- <option value="">--Month--</option> -->
-        </select>
-     </div>
-
-     <script>
-
-        // sum=0;
-        // sum += 10;
-        // console.log(sum);
-        
-        // let opt = '<option value="">--Year--</option>';
-        // console.log(opt);
-        // //creating the years using loops
-        // for(i=2000;i<=2025;i++){
-        //     console.log(i);
-        // //pushing the data / concating the data
-        // opt += '<option value ="">' +i+ '</option>';
-        
-        // console.log(opt);
-        
-            
-        // }
-
-        // document.getElementById('year').innerHTML = opt;
-
-
-        let opt = '<option value="">--Month--</option>';
-        console.log(opt);
-        
-       //iterating years/months/days using loop
-
-    for(let i=1;i<=12;i++){
-        console.log(i);
-
-
-        opt += '<option value="">' +i+ '</option>'
-        console.log(opt);
-        
-        
-    }
-
-//    console.log(
-//     document.getElementById('Month'));
-               document.getElementById('Month').innerHTML = opt
-
-
-        
-        
-        
-
-
-
-     </script>
+    <h3>Facebook Login</h3>
+<div class="container">
     
+    <span class="dob-label">Date of Birth</span>
+    <select id="day"><option value="">Day</option></select>
+    <select id="month"><option value="">Month</option></select>
+    <select id="year"><option value="">Year</option></select>
+</div>
+
+<script>
+let day = document.getElementById('day');
+let month = document.getElementById('month');
+let year = document.getElementById('year');
+
+// Populate Days 1-31
+for(let i=1;i<=31;i++){
+    day.innerHTML += "<option>"+i+"</option>";
+}
+
+// Populate Months Jan-Dec
+let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+for(let i=0;i<months.length;i++){
+    month.innerHTML += "<option>"+months[i]+"</option>";
+}
+
+// Populate Years 1900-2025
+for(let i=1900;i<=2025;i++){
+    year.innerHTML += "<option>"+i+"</option>";
+}
+</script>
 </body>
 </html>

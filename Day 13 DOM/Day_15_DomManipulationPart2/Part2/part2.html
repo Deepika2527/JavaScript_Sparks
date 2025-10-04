@@ -92,6 +92,34 @@
 
 
 
+
+        // Get the gallery div
+let gallery = document.getElementById('gallery');
+
+// Create figure element
+let figure = document.createElement('figure');
+
+// Create img element
+let img = document.createElement('img');
+img.src = "https://images.pexels.com/photos/4738081/pexels-photo-4738081.jpeg";
+img.alt = "Nature";
+img.width = 200;
+img.height = 200;
+
+// Create figcaption element
+let caption = document.createElement('figcaption');
+caption.innerHTML = "Beautiful Nature Image";
+
+// Append img and figcaption to figure
+figure.appendChild(img);
+figure.appendChild(caption);
+
+// Append figure to gallery div
+gallery.appendChild(figure);
+
+
+
+
          
 
         

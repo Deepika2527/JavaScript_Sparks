@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form events</title>
+</head>
+<body>
+
+  <form action="">
+      Name: <input type="text" name="" id="nm"> <br><br>
+    Password : <input type="password" name="" id="">
+    <button type="submit" id="btn">Submit</button>
+  </form>
+
+
+
+  <script>
+    let form  = document.querySelector('form');
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+    })
+
+
+
+    let name = document.getElementById('nm');
+    name.addEventListener('focus',(event)=>{
+        console.log(event.target);
+        event.target.style.backgroundColor = "plum"
+        
+    })
+    nm.addEventListener('blur',(e)=>{
+        event.target.style.backgroundColor ='lightgreen'
+    })
+  </script>
+    
+</body>
+</html>
