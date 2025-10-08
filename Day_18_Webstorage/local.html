@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+</head>
+<body>
+
+
+
+<script>
+
+    //set the items
+
+    localStorage.setItem('name','Js')
+    localStorage.setItem('I_name','Ait')
+    localStorage.setItem('students',3)
+
+    //getItems
+//    console.log( localStorage.getItem('name'));
+//    console.log( localStorage.getItem('students'))
+
+   //removeItem
+   localStorage.removeItem('name')
+
+   //clear
+   localStorage.clear()
+
+   
+
+
+    //using session storage
+    // sessionStorage.setItem('session_name','Js session')
+
+    //setItems using arrays
+
+    let n = ['n1','n2','n3'];
+    console.log(n);
+    // localStorage.setItem('n',n);
+    // let res = localStorage.getItem('n');
+    // console.log(res);
+    
+    //using json.stringyfy
+    localStorage.setItem('n', JSON.stringify(n))
+    // let res = localStorage.getItem('n');
+    // console.log(res);
+    // console.log(res[2]);
+
+    //using JSON.parse
+    let res = JSON.parse(localStorage.getItem('n'));
+    console.log(res);
+    console.log(res[0]);
+
+
+    //
+    
+    
+    
+    
+
+    
+    
+
+    
+
+
+    
+</script>
+
+
+    
+</body>
+</html>

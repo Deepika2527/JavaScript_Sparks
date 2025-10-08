@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: brown;
+            height: 100vh;
+        }
+
+        div {
+            border: 1px solid black;
+            margin: 10px;
+            height: 400px;
+            width: 400px;
+        }
+
+        #outer {
+            background-color: lawngreen;
+            margin: 10px auto;
+        }
+
+        #inner {
+            height: 300px;
+            width: 300px;
+            background-color: burlywood;
+            margin: 10px auto;
+            display: flex;
+            align-self: start;
+            justify-content: center;
+
+        }
+
+        #btn {
+            height: 50px;
+            width: 100px;
+            background-color: coral;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="outer">
+        <div id="inner">
+            <button id="btn"> Add me
+
+            </button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let btn = document.getElementById('btn');
+        let inner = document.getElementById('inner')
+        let outer = document.getElementById('outer')
+
+
+       
+
+        btn.addEventListener('click', (e) => {
+            alert("Button is clicked");
+            // e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+        },)
+
+
+          btn.addEventListener('click', () => {
+            alert("Button is clicked")
+        }, )
+        inner.addEventListener('click', () => {
+            alert("Inner div is clicke")
+        }, )
+        outer.addEventListener('click', () => {
+            alert("Outer div is clicked")
+        },)
+        document.body.addEventListener('click', () => {
+            alert('body is clicked')
+        },)
+    </script>
+
+</body>
+
+</html>
