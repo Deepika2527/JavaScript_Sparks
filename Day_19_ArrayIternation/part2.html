@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArryIteration-2</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        let n = [1, 29, 3, 4, 2, 7, 8, 9, 10];
+        let freach = n.forEach((e, i, a) => {
+            // console.log(e);
+            // console.log(i);
+            // console.log(a);
+            return e * 2;
+
+        })
+        console.log(freach);
+
+
+        //map
+        console.log('***using map***');
+        let mp = n.map((e, i, a) => {
+            return e * 2
+
+        })
+        console.log(mp);
+        console.log('originam array', n);
+
+
+        //filter 
+        console.log('###using filter###');
+
+        let fltr = n.filter((e, i, a) => {
+            return e >= 10
+        });
+        console.log(fltr);
+
+
+
+        //reduce
+
+        console.log('%%%reduce%%%');
+        let red = n.reduce((acc, e, i, v) => {
+            return acc * e
+        }, 0);
+        console.log(red);
+
+
+        //find
+        console.log('^^USING FIND^^^');
+
+        let fnd = n.find((e, i, v) => {
+            return e > 2
+        })
+        console.log(fnd);
+
+
+        //some
+        let sum = n.every((n) => {
+            return n > 5
+        });
+        console.log(sum);
+
+
+
+
+
+        //array of object
+
+
+        let prodcuts = [
+
+            { id: 1, name: 'Redmi', color: 'pink', price: 25000, storage: '4gb' },
+            { id: 2, name: 'Laptop', color: 'red', price: 45000, storage: '10gb' },
+            { id: 3, name: 'GooglePixel', color: 'black', price: 25000, storage: '6gb' },
+            { id:4, name: 'Samusng', color: 'pink', price: 40000, storage: '8gb' },
+            { id: 5, name: 'Sanddisk', color: 'blue', price: 49000, storage: '8gb' },
+            { id: 6, name: 'Iphne', color: 'white', price: 75000, storage: '6gb' },
+            { id: 7, name: 'OnePLus', color: 'purlpe', price: 35000, storage: '2gb' },
+
+        ]
+
+
+
+        let nm = prodcuts.map((product)=>{
+            return product.name
+        });
+        console.log(nm);
+        // using filter
+
+        let price = prodcuts.filter((product)=>{
+            return product.price>=40000
+        })
+        console.log(price);
+        console.log(prodcuts);
+
+
+
+        //total amount
+
+        let tamt = prodcuts.reduce((acc,p)=>{
+            return acc+p.price
+        },0)
+        console.log(tamt);
+        
+        
+        //find
+
+        let strge = prodcuts.find((store)=>{
+            return store.storage>'4gb'
+        });
+        console.log(strge);
+        
+
+
+       //color
+
+       let color = prodcuts.every((clr)=>{
+        return clr.color === 'pink'
+       })
+       console.log(color);
+       
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
