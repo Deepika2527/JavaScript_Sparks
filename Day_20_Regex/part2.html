@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex part2</title>
+</head>
+<body>
+
+
+    <script>
+
+        // \d- we can retrive the digits
+        let sent = "Hello my roll no is 25 and my age is 20_My data*.";
+        let srch = /\d/g;
+
+        console.log(sent.match(/\d/g));
+        console.log(srch.test(sent));
+        console.log(sent.match(/\D/g));
+
+
+
+        // \w  vs \W
+        let sent1 = "deepika_123@gmail.com!*myname)";
+        console.log(sent1.match(/\w/g));
+        console.log(sent1.match(/\W/g));
+
+        // \s vs \S
+        
+
+        let sent2 = " Hell all           js @aiT";
+        console.log(sent2.match(/\s/g));
+        console.log(sent2.match(/\S/g));
+        
+        // [] - whatever ypu mention in that [] those will be returned
+
+        let str = "Hello javascript...!!!its a client side scripting language";
+        console.log(str.match(/[aeiou]/gi));
+        console.log(str.match(/[jspt]/gi));
+        console.log(str.match(/[^aeiou]/gi));
+        
+
+
+        // [0-9] [a-z] [A-Z][a-zA-Z0-9]
+
+        let password = 'Deepika@123*^%';
+        console.log(password.match(/[0-9]/gi)); //only digits
+        console.log(password.match(/[a-z]/g)); //only lowercase
+        console.log(password.match(/[A-Z]/g)); //ONLY UPPERCASE
+        console.log(password.match(/[a-zA-Z0-9]/g));
+        console.log(password.match(/\D/gi));
+
+        let sent3= 'Deepika is a JavaScript trainer';
+       let result = sent3.match(/[A-Z][a-z]+/g);
+       console.log(result);
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>

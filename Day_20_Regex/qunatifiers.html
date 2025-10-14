@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantifiers</title>
+</head>
+<body>
+
+    <script>
+        console.log("I like javaScript".match(/java/gi));
+        //using .
+
+        console.log('cat'.match(/.at/));
+        console.log('Rat mat bat'.match(/.at/g));
+        console.log('Rat mat bat fat flat'.match(/.at/g));
+
+        // + 
+        console.log("a aa aaa".match(/a+/g));
+        console.log("helllooooo".match(/l+/g));
+        console.log('baaa'.match(/a+/g));
+        
+
+        // *
+        console.log('baaa'.match(/a*/g));
+        console.log('b'.match(/a*/g));
+        console.log('b'.match(/a+/g));
+        
+
+        console.log('abcaaab '.match(/a+/g));
+        console.log('abcaaab '.match(/a*/g));
+
+
+        //?
+        console.log('color'.match(/u?l/g));
+        console.log('colour'.match(/u?l/g));
+        console.log('know'.match(/k?n/g));
+        console.log('now'.match(/k?n/g));
+
+        //anchor- start ^ and end $
+
+        console.log("Hello Js".match(/^Hello/));
+        console.log("Start your Jouney start it now".match(/^start/i));
+        
+        
+        // end $
+        console.log("Welcome Js".match(/Js$/));
+        console.log("Welcome js,welcome all".match(/Js$/));
+
+
+        console.log("dog dogs dog doggy".match(/\bdog\b/gi));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+        
+        
+        
+        
+
+        
+    </script>
+    
+</body>
+</html>

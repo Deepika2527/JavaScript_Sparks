@@ -32,7 +32,7 @@ let search = /pattern/flags
 way-2
 constructor
 let serach1 = new Regexp('pattern');
-let serach1 = new Regexp('pattern','flags');
+let serach1 = new RegExp('pattern','flags');
 
 
 methodd-
@@ -65,24 +65,24 @@ boundaries- \b
 
 
 \d - Digits
-\D- Non didgits
-\w- words
-\W- Non word
+\D- Non didgits- it return all the  charcteres,specialcharcter including spaces
+\w- words,letters,underscore
+\W- Non word- special charcters are returned
 \s- space
 \S- not including the spaces
-[a-z]-
-[A-Z]-
-[a-zA-Z0-9]
+[a-z]- LOWER CASE
+[A-Z]- Uppercase
+[a-zA-Z0-9] - lettres+digits
 
 
 Quantifiers
 
 . - cat /c.t/- except a new line
-+ - baa - 0 or more 
-* - 1 or mor
++ - baa - 1 or more 
+* - 0 or mor
 {n}- 0 or more
-{n, }-
-{n,m} -
+{n, }-  n or more
+{n,m} - between n and m
 
 
 
