@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+
+    <h1>Form validation using regex</h1>
+
+    <form action="" id="simpleForm" novalidate>
+    
+        <label for="name">Name:</label>
+        <input type="text" id="name">  <br><br>
+
+
+        <!-- input for email -->
+         <label for="em">Email:</label>
+         <input type="email" id="em">  <br><br>
+
+
+         <!-- telephone -->
+          <label for="phone">Phone: <input type="tel" value="+91" disabled size="1"></label>
+          <input type="tel" name="" id="phone"> <br><br>
+
+
+          <button type="submit">Submit</button>
+
+
+
+    </form>
+
+
+
+    <script>
+        let submit = document.getElementById('simpleForm');
+        submit.addEventListener('submit',(e)=>{
+            e.preventDefault();
+
+
+
+
+            let name = document.getElementById('name').value.trim();
+            // console.log(name);
+            let email= document.getElementById('em').value.trim();
+            // console.log(email);
+
+
+            let phone = document.getElementById("phone").value.trim();
+            // console.log(phone);
+            
+            // if(name==='' || email ==='' || phone===''){
+            //     alert('Please fill the fileds')
+            // }
+            // else{
+            //     alert('form has been submitted')
+            // }
+
+
+            //using regex
+            let nameRegex = /^[A-Za-z\s]+$/;
+            // console.log(nameRegex.test(name));
+               
+            //
+            let emailRegex = /^[\w-.]+@[a-z\d]+\.[a-zA-Z]{2,}$/i;
+            //  let emailRegex = /^[\w\d-.]+@[a-z\d]+.\[a-z]{2,}$/;
+            console.log(emailRegex.test(email));
+            
+
+            let phoneRegex = /^[6-9]\d{9}$/;
+            console.log(phoneRegex.test(phone));
+            
+            
+
+            if (!nameRegex.test(name)) {
+            alert('Name should contain only letters and spaces');
+        }
+        else if (!emailRegex.test(email)) {
+            alert('Invalid email address');
+        }
+        else if (!phoneRegex.test(phone)) {
+            alert('Invalid phone number');
+        }
+        else {
+            alert('Form submitted successfully!');
+        }
+        })
+    </script>
+    
+</body>
+</html>

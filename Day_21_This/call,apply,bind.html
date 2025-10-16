@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call,apply,bind</title>
+</head>
+<body>
+    <script>
+
+        let dPartner1={
+            name: 'Rahul',
+            location: 'Kukatpally',
+            phone: 1234567890,
+           
+        }
+
+        
+
+
+                let dPartner2={
+            name: 'Vijay',
+            location: 'Charminar',
+            phone: 1234567901
+        }
+        let dPartner3={
+            name: 'Ranveer',
+            location: 'Gachibowli',
+            phone: 7878789090
+        }
+        let dPartner4={
+            name: 'Kiran',
+            location: 'Kukatpally',
+            phone: 1234567890
+        }
+        let dPartner5={
+            name: 'Rahul',
+            location: 'Lingampalli',
+            phone: 6784567890
+        }
+        
+
+
+         function orderFood(name,foodItem){
+                return `Hi ${name} You have order ${foodItem}.Our deliveryPartner ${this.name} from ${this.location} has started you can contatc him ${this.phone}`;
+                
+            }
+
+
+            //call apply bind
+
+            let m1 = orderFood.call(dPartner4,'Tarunnum','Briyani');
+            console.log(m1);
+            let m2 = orderFood.call(dPartner4,'Deepika','Briyani');
+            console.log(m2);
+
+            //apply
+
+            let m3 = orderFood.apply(dPartner1,['Nikath','Burger']);
+            console.log(m3);
+
+
+            //bind - return a function
+            let m4 = orderFood.bind(dPartner2,'Fathima','Tiramisu');
+            console.log(m4());
+            
+
+            
+            
+            
+
+
+    </script>
+</body>
+</html>

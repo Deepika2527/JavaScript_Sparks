@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+   <button id="btn">Submit</button>
+   <button onclick="clicked(this)">Cliked</button>
+
+
+    <script>
+        console.log(this);
+        console.log(window);
+
+        //
+        function personDetails(name,age,rollno){
+           this.name = name;
+            this.age = age;
+            this.rollno = rollno;
+        }
+
+        let Details = new personDetails('Fathima',20,32);
+        console.log(Details);
+        console.log(Details.name);
+        console.log(Details.age);
+        
+        
+        //this -functions
+
+
+        function test(){
+            console.log(this);
+            console.log('hello');
+            
+            
+        }
+        test()
+
+        //using eventHandlers
+        document.getElementById('btn').addEventListener('click', function(){
+             console.log(this);
+             
+        })
+
+
+        //with event handler
+        function clicked(ele){
+            console.log(ele);
+            
+        }
+        //methodObject
+
+        let obj = {
+            name :'Nikhath',
+            rollno:25,
+            clas: 'online',
+             greet: function(trainer){
+                console.log(`Hi GoodEvening ${this.name} you are RollNo is: ${this.rollno} and the clases are in Mode ${this.clas} the trainer is ${trainer}`);
+                
+                
+            }
+
+        }
+         obj.greet('Deepika');
+
+
+         //arraow
+
+         let add = ()=>{ console.log(this);
+         }
+         add();
+
+
+        //  const obj1 ={
+        //     name1 :' Tarunum',
+        //     addng :()=>{
+        //         console.log(this.name1);
+                
+        //     }
+        //  }
+        //  obj1.addng()
+
+const obj3 = {
+    name3 :'Deepika',
+    regularFun: function()
+    {
+        const arrowFun = ()=> console.log(this.name3);
+            arrowFun();
+        
+    }
+};
+obj3.regularFun()
+
+         
+        
+    </script>
+    
+</body>
+</html>
