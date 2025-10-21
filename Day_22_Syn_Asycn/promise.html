@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <script>
+        // let p = new Promise((resolve,rejected)=>{
+
+        //     let is_loggedIn = true;
+        //     if(is_loggedIn){
+        //         resolve(is_loggedIn)
+        //     }
+        //     else{
+        //         rejected(is_loggedIn)
+        //     }
+            
+        // }).then((message)=>{
+        //     console.log(message);
+            
+        // }).catch((error)=>{
+        //     console.log(error);
+            
+        // }).finally(()=>console.log(('Exection failed')));
+        
+        // console.log(p);
+
+
+        //hnadling async by promise
+        function task1(){
+            console.log('Food added to cart');
+            
+        }
+        function task3(){
+            console.log('Hurrayy..!!Order is on the way');
+            
+        }
+        
+        let promise = new Promise((resolve,reject)=>{
+                 task1();
+                 setTimeout(() => {
+                    console.log('Payment sucessfull...!!1');
+                    resolve();
+                    
+                    
+                 }, 4000);
+        }).then(()=>{
+            task3()
+        })
+        
+        console.log(promise);
+        
+    </script>
+    
+</body>
+</html>

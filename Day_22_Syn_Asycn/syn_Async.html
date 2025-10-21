@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syn and asycn</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // console.log('Hello');
+        // console.log('Task 1');
+        // console.log('Task 2');
+
+
+        // setTimeout(()=>{
+        //     console.log('Task 3');
+            
+        // },2000)
+        // console.log('Task 4');
+
+
+
+        function task1(){
+            console.log('Added to cart');
+            
+        }
+
+       setTimeout(()=>{
+        console.log('Paymnet sucesfull');
+        
+       },6000)
+        function task3(){
+            console.log('Order placed sucessfull');
+            
+        }
+
+        task1();
+        // task2();
+        task3();
+
+
+        //callbacks
+        //promises-
+        //asyn and awaut
+
+
+        //callbacck()
+        setTimeout(()=>{
+            console.log('1');
+            setTimeout(()=>{
+                console.log('2');
+                setTimeout(()=>{
+                    console.log('3');
+                    
+                },1000)
+                setTimeout(()=>{
+                    console.log('4');
+                    
+                },1000)
+                
+            },1000)
+            
+        },1000)
+        
+        
+        
+        
+    </script>
+</body>
+</html>
