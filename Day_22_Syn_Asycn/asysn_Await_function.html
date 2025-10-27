@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and await</title>
+</head>
+<body>
+
+    <script>
+
+       
+
+
+    //    async function data(){
+    //      let promise = new Promise((resolve,reject)=>{
+    //        setTimeout(()=>{
+    //         resolve("Hi im from promise")
+    //        },3000)
+    //     })
+    //    promise.then((res)=>console.log(res)).then(d=>console.log('hello'))
+    // //    console.log('hello');
+       
+    //    }
+    //    data();
+
+
+    async function data1(){
+        let promise = new Promise((resolve,reject)=>{
+           setTimeout(()=>{
+            resolve("Hi im from promise")
+           },3000)
+        })
+        let res = await promise;
+        console.log(res);
+        console.log('Hllo');
+        
+        
+
+    }
+    data1()
+
+
+
+    async function fetchUser(){
+        let response = await fetch("https://dummyjson.com/users/1");
+    let res = await response.json();
+    console.log(res.firstName);
+    
+        
+    }
+    fetchUser();
+
+       
+
+      
+      
+       
+
+        
+        
+
+        
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Products</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .container{
+            display: flex;
+          
+            flex-wrap: wrap;
+            justify-content: center;
+          gap:20px;
+
+        }
+        .product{
+            width: 350px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 5px;
+            box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product img{
+            height: 200px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Products</h1>
+    <div class="container" id="product"></div>
+
+
+    <script>
+        async function getProducts(){
+            let fetching = await fetch('https://dummyjson.com/products');
+            // console.log(fetching);
+            let product = await fetching.json();
+            console.log(product);
+            console.log(product.products);
+
+            let container = document.getElementById('product');
+            console.log(container);
+
+            product.products.forEach((item)=>{
+                container.innerHTML += `
+                <div class='product'>
+
+                   <h1> Title:${item.title} </h1>
+                   <img src= ${item.thumbnail} alt=${item.title}>
+                   <p> ${item.description}</p>
+                   <h3> Rating: ${item.rating}&#11088;&#11088;&#11088 </h3>    
+
+
+                    </div>
+                
+                
+                
+                
+                
+                `
+            }
+                
+            );
+
+
+            
+            
+            
+        }
+
+         getProducts()
+    </script>
+   
+    
+</body>
+</html>
