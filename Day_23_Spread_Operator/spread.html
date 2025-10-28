@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+
+    <h1>Spread operator 😎😎</h1>
+
+
+    <script>
+
+        let a =[1,2,3];
+        let b= [4,5,6];
+        // let conct = a+b;
+        // console.log(conct);
+        
+        console.log(a);
+        console.log(b);
+        
+        
+        let res =[...a,...b]; //copying
+        console.log(res);
+        a.push(7);
+        console.log(a);
+        
+        // console.log(...a); //Spreading the elements in an array
+
+
+        let result =['hello',...a,...b];
+        console.log(result);
+        //object
+        let obj1 ={
+            id:1,
+            name:'Nikath',
+            place:'Hyd'
+        }
+
+        let obj2 ={
+            id:2,
+            name:'Taranumm',
+            place:'Chennai'
+        }
+        let obj3 ={
+            id:3,
+            name:'Fathima',
+            place:'Banglore'
+        }
+        console.log(obj1);
+        console.log({...obj1});
+        let copy = {...obj1,...obj2,...obj3}
+        console.log(copy);
+
+        //object
+
+        let employee1 = {
+            id: 1,
+            name:'Fathima'
+
+        }
+         let salary = {
+
+        salary:150000,
+        loc:'Dubai'
+        }
+
+        let company ={...employee1,...salary};
+        console.log(company);
+
+
+
+        //functions
+        function add(a,b,c){
+            return a+b+c
+        }
+        let num =[1,2,3];
+        console.log(add(...num));
+
+
+
+
+        //
+        let greet = 'Hello';
+        console.log(greet);
+        
+        console.log(...greet);
+        
+        
+        
+            
+        
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>

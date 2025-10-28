@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real time</title>
+</head>
+
+<body>
+
+    <script>
+
+        //step-1 storing the products
+        let products = [
+            { id: 1, name: 'Burger', price: 120, category: 'Fastfood' },
+            { id: 2, name: 'Pizza', price: 300, category: 'Fastfood' },
+            { id: 3, name: 'Salad', price: 150, category: 'Healthy' },
+            { id: 4, name: 'Juice', price: 90, category: 'Beverage' },
+        ];
+        console.log(products);
+        //save the data in the storage
+        
+        localStorage.setItem('foodProducts',JSON.stringify(products));
+        
+        
+        //retrive the dat from the local storage
+        let storedProducts = JSON.parse(localStorage.getItem('foodProducts'));
+        console.log(storedProducts);
+        //copy it to another varaible
+
+        let allProducts =[...storedProducts];
+        console.log(allProducts);
+
+
+        //map method
+        let updatedProducts = allProducts.map((item,a,i)=>{
+            return {...item,price:item.price*1.1}
+        });
+        console.log(updatedProducts);
+        console.log(allProducts);
+        
+        //filter
+        let healtyItems = updatedProducts.filter(item=>{
+           return  item.category === 'Healthy'
+        });
+        console.log(healtyItems);
+        //filter
+        let totalProducts = updatedProducts.reduce((total,item)=>{
+          return  total + item.price
+        },0);
+        console.log(totalProducts);
+        
+        
+    
+        
+        
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
