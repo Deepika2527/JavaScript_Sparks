@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+
+    <script>
+        let courses = ['Html', 'Css', 'Js', 'Html1', 'Css1', 'Js1'];
+        let [a, b, , d, , f] = courses;
+        console.log(a);
+        console.log(b);
+        // console.log(c);
+        console.log(d);
+        // console.log(e);
+        console.log(f);
+
+
+        let nestedCourses = ['Html', 'React', ['python', 'django'], 'Node'];
+        console.log(nestedCourses);
+        console.log(nestedCourses[2][0]);
+        //using destruing
+
+        let [l, m, [n, o], p] = nestedCourses;
+        console.log('****************');
+
+        console.log(l);
+        console.log(m);
+
+        console.log(n);
+
+        console.log(o);
+        console.log(p);
+        console.log('****************');
+
+
+        //object destructring
+
+        let student ={
+            name : 'Name_1',
+            id: 1,
+            sub : 'Math'
+        }
+         console.log('****************');
+         
+        // let {name,id,sub} = student;
+        // console.log(name);
+        // console.log(id);
+        // console.log(sub);
+         console.log('****************');
+         console.log('Alias- Oname:Aname');
+
+         let {name:N,id:I,sub:S} =student;
+         console.log(N);
+         console.log(I);
+         console.log(S);
+
+
+          
+         
+         
+
+         
+         
+        
+        
+
+
+
+
+        function test() {
+            console.log('Testing...');
+
+        }
+        test()
+        console.log(a);
+
+
+
+
+
+
+
+        // console.log(courses[1]);
+        // console.log(courses[2]);
+
+        // a = courses[1];
+        // b= courses[2]
+        // console.log(b);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

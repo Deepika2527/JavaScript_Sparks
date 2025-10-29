@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-of For-In</title>
+</head>
+<body>
+
+    <!--   for-of                   vs               for-in  ------ used to iterate over index values
+           array -used for ***                          objects   -used for objects
+                                                        string
+                               
+        synatx:
+        for(let i of array_name){                       syntax:
+         //blcok of code                                        for(let i in arra_name){ //block of code}
+        
+        }
+     
+     -->
+
+     <script>
+        let names = ['Mango','Banana','Grapes','Kiwi'];
+        console.log(names);
+        
+
+       
+
+        // for(let i =0; i<names.length; i++){
+        //     console.log(names[i]);
+            
+        // }
+
+
+         //for-of
+         for(let name of names){
+            console.log(name);
+            
+         }
+
+         for(let keys of Object.keys(names)){
+            console.log(`keys are ${keys}`);
+            
+         }
+
+         for(let values of Object.values(names)){
+            console.log(`Values are using for-of ${values}`);
+            
+         }
+         for(let [k,v] of Object.entries(names)){
+            console.log(`key ${k}: value ${v} `);
+            
+         }
+
+         for(let fruit in names){
+            console.log(fruit);
+            
+         }
+
+         let data = {
+            name:'deepika',
+            role:'Developer'
+         }
+        //  console.log(data.name);
+
+
+         for(let res in data){
+            // console.log(res);
+            // console.log(data[res]);
+
+            console.log(`By using for-in ${res}: ${data[res]}`);
+            
+            
+
+            
+         }
+        //  for(let result of data){
+        //     console.log(result);
+            
+        //  }
+         
+
+
+         
+         
+
+     </script>
+
+
+
+
+    
+</body>
+</html>
